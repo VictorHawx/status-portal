@@ -336,16 +336,7 @@ export default function DeltaSmithPortal() {
           padding: "18px 32px", display: "flex", alignItems: "center",
           justifyContent: "space-between", borderBottom: "1px solid #E2E8F0",
         }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2L2 8L12 14L22 8L12 2Z" fill="#0F1D3D"/>
-              <path d="M2 16L12 22L22 16" stroke="#0F1D3D" strokeWidth="2" strokeLinejoin="round"/>
-              <path d="M2 12L12 18L22 12" stroke="#2563EB" strokeWidth="2" strokeLinejoin="round"/>
-            </svg>
-            <span style={{ fontSize: 17, fontWeight: 600, color: "#0F1D3D", letterSpacing: "-0.02em" }}>
-              delta<span style={{ fontWeight: 400 }}>smith</span>
-            </span>
-          </div>
+          <img src="https://deltasmith.io/assets/brand/DeltaSmith_logo1.png" alt="DeltaSmith" style={{ height: 28 }} />
           <span style={{
             fontSize: 11, color: "#94A3B8", letterSpacing: "0.12em",
             textTransform: "uppercase", fontWeight: 500,
@@ -471,14 +462,7 @@ export default function DeltaSmithPortal() {
         zIndex: 10,
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2L2 8L12 14L22 8L12 2Z" fill="#0F1D3D"/>
-            <path d="M2 16L12 22L22 16" stroke="#0F1D3D" strokeWidth="2" strokeLinejoin="round"/>
-            <path d="M2 12L12 18L22 12" stroke="#2563EB" strokeWidth="2" strokeLinejoin="round"/>
-          </svg>
-          <span style={{ fontSize: 15, fontWeight: 600, color: "#0F1D3D" }}>
-            delta<span style={{ fontWeight: 400 }}>smith</span>
-          </span>
+          <img src="https://deltasmith.io/assets/brand/DeltaSmith_logo1.png" alt="DeltaSmith" style={{ height: 28 }} />
           <span style={{ fontSize: 12, color: "#CBD5E1", margin: "0 4px" }}>/</span>
           <span style={{ fontSize: 12, color: "#94A3B8" }}>Client Portal</span>
         </div>
