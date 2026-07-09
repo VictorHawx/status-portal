@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 /*
   DeltaSmith Brand Tokens (from live site deltasmith.io)
@@ -299,6 +299,13 @@ export default function DeltaSmithPortal() {
   const [project, setProject] = useState(null);
   const [loading, setLoading] = useState(false);
   const [tab, setTab] = useState("progress");
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const handleLookup = () => {
     setError("");
@@ -330,11 +337,17 @@ export default function DeltaSmithPortal() {
       <div style={{
         minHeight: "100vh", background: "#FFFFFF",
         fontFamily: "'Inter', -apple-system, sans-serif",
-        display: "flex", flexDirection: "column",
+        display: "flex", flexDirection: "column", paddingTop: 64,
       }}>
         <header style={{
           padding: "18px 32px", display: "flex", alignItems: "center",
-          justifyContent: "space-between", borderBottom: "1px solid #E2E8F0",
+          justifyContent: "space-between",
+          position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
+          transition: "background 0.3s, box-shadow 0.3s",
+          background: scrolled ? "rgba(255, 255, 255, 0.85)" : "transparent",
+          backdropFilter: scrolled ? "blur(12px)" : "none",
+          borderBottom: scrolled ? "1px solid #E2E8F0" : "1px solid transparent",
+          boxShadow: scrolled ? "0 1px 3px rgba(0,0,0,0.04)" : "none",
         }}>
           <img src="https://deltasmith.io/assets/brand/DeltaSmith_logo1.png" alt="DeltaSmith" style={{ height: 28 }} />
           <span style={{
@@ -454,12 +467,17 @@ export default function DeltaSmithPortal() {
     <div style={{
       minHeight: "100vh", background: "#F8FAFC",
       fontFamily: "'Inter', -apple-system, sans-serif",
+      paddingTop: 64,
     }}>
       <header style={{
         padding: "14px 32px", display: "flex", alignItems: "center",
-        justifyContent: "space-between", borderBottom: "1px solid #E2E8F0",
-        position: "sticky", top: 0, background: "rgba(255,255,255,0.95)", backdropFilter: "blur(8px)",
-        zIndex: 10,
+        justifyContent: "space-between",
+        position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
+        transition: "background 0.3s, box-shadow 0.3s",
+        background: scrolled ? "rgba(255, 255, 255, 0.85)" : "transparent",
+        backdropFilter: scrolled ? "blur(12px)" : "none",
+        borderBottom: scrolled ? "1px solid #E2E8F0" : "1px solid transparent",
+        boxShadow: scrolled ? "0 1px 3px rgba(0,0,0,0.04)" : "none",
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
           <img src="https://deltasmith.io/assets/brand/DeltaSmith_logo1.png" alt="DeltaSmith" style={{ height: 28 }} />

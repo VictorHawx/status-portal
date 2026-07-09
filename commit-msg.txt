@@ -1,1 +1,1 @@
-feat: match DeltaSmith branding — real logo, favicon, glassmorphism header
+fix: transparent glassmorphism header + triangle favicon
