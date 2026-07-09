@@ -344,12 +344,12 @@ export default function DeltaSmithPortal() {
           justifyContent: "space-between",
           position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
           transition: "background 0.3s, box-shadow 0.3s",
-          background: scrolled ? "rgba(255, 255, 255, 0.85)" : "transparent",
+          background: scrolled ? "rgba(255, 255, 255, 0.65)" : "transparent",
           backdropFilter: scrolled ? "blur(12px)" : "none",
           borderBottom: scrolled ? "1px solid #E2E8F0" : "1px solid transparent",
           boxShadow: scrolled ? "0 1px 3px rgba(0,0,0,0.04)" : "none",
         }}>
-          <img src="https://deltasmith.io/assets/brand/DeltaSmith_logo1.png" alt="DeltaSmith" style={{ height: 28 }} />
+          <img src="https://deltasmith.io/assets/brand/DeltaSmith_logo1.png" alt="DeltaSmith" style={{ height: 34 }} />
           <span style={{
             fontSize: 11, color: "#94A3B8", letterSpacing: "0.12em",
             textTransform: "uppercase", fontWeight: 500,
@@ -474,13 +474,13 @@ export default function DeltaSmithPortal() {
         justifyContent: "space-between",
         position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
         transition: "background 0.3s, box-shadow 0.3s",
-        background: scrolled ? "rgba(255, 255, 255, 0.85)" : "transparent",
+        background: scrolled ? "rgba(255, 255, 255, 0.65)" : "transparent",
         backdropFilter: scrolled ? "blur(12px)" : "none",
         borderBottom: scrolled ? "1px solid #E2E8F0" : "1px solid transparent",
         boxShadow: scrolled ? "0 1px 3px rgba(0,0,0,0.04)" : "none",
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <img src="https://deltasmith.io/assets/brand/DeltaSmith_logo1.png" alt="DeltaSmith" style={{ height: 28 }} />
+          <img src="https://deltasmith.io/assets/brand/DeltaSmith_logo1.png" alt="DeltaSmith" style={{ height: 34 }} />
           <span style={{ fontSize: 12, color: "#CBD5E1", margin: "0 4px" }}>/</span>
           <span style={{ fontSize: 12, color: "#94A3B8" }}>Client Portal</span>
         </div>

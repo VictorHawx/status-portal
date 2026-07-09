@@ -1,1 +1,1 @@
-fix: transparent glassmorphism header + triangle favicon
+style: larger logo + more transparent header
